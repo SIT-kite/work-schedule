@@ -1,0 +1,118 @@
+:root { line-height: 1.5; }
+
+
+table, table th, table td { border: 1px solid currentColor; }
+table { border-collapse: collapse; margin: 1em auto; }
+table th, table td { padding: .25ex .5ch; }
+
+button, input, select, textarea { font: inherit; }
+button, select { cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1 { font-size: 1.2em; }
+h2 { font-size: 1.1em; }
+
+.center { text-align: center; }
+
+body { margin: 0; }
+
+header {
+	padding: .5em 2em;
+	color: white;
+	background-color: #00A5ED;
+	text-align: center;
+}
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		"schedule week"
+		"schedule people";
+	grid-gap: 1em;
+	padding: 1em;
+
+	max-width: 56em;
+	margin: 0 auto;
+}
+
+.schedule { grid-area: schedule; }
+.week     { grid-area: week; }
+.people   { grid-area: people; }
+
+body    { background-color: #EEE; }
+section { background-color: white; }
+
+section { padding: 0 1em; }
+section > * { margin: 1em auto; }
+
+/* #schedule */
+#schedule .selected { background-color: #DFD; }
+#schedule .error    { background-color: #FDD; }
+#schedule .disabled { background-color: #DDD; }
+
+#people {
+	box-sizing: border-box;
+	height: 10em;
+	padding: .5em;
+	overflow-y: auto;
+	/* color: #999; */
+	border: 1px solid currentColor;
+	user-select: none;
+}
+
+.button-groups,
+.button-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+.button-groups {
+	justify-content: space-between;
+}
+.button-group > button:not(:last-child) {
+	margin-right: .5em;
+}
+
+button {
+
+	display: inline-block;
+	box-sizing: border-box;
+
+	min-width: 2em;
+	max-width: 10em;
+	height: auto;
+	margin: 0;
+	padding: .5em;
+
+	border: none;
+
+	/* 字体 */
+	font: inherit;
+	line-height: 1;
+	text-decoration: none;
+
+	color: white;              /* 文本颜色 */
+	background-color: #00A5ED; /* 背景色 */
+
+	/* 当文本宽度小于最小宽度时，使文本居中显示 */
+	text-align: center;
+
+	/* 当文本宽度大于最小宽度时，省略超出宽度的文本 */
+	white-space: nowrap;     /* 不换行 */
+	overflow: hidden;        /* 隐藏超出部分 */
+	text-overflow: ellipsis; /* 超出宽度时，将超出宽度的文本替换为省略号 */
+
+	user-select: none;          /* 避免用户选中按钮上的文本 */
+	touch-action: manipulation; /* 避免用户双击按钮时触发双击放大手势 */
+	cursor: pointer;            /* 将光标设为指示 */
+
+	transition: opacity .2s ease-in-out; /* 过渡效果 */
+
+}
+
+button:hover {
+	opacity: .875;
+}
+
+button:active {
+	opacity: .75;
+}

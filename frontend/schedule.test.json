@@ -1,0 +1,19 @@
+{
+	"result": [
+		{
+			"name": "name1",
+			"group": "group1",
+			"id": "id1"
+		},
+		{
+			"name": "name2",
+			"group": "group2",
+			"id": "id2"
+		},
+		{
+			"name": "name3",
+			"group": "group3",
+			"id": "id3"
+		}
+	]
+}

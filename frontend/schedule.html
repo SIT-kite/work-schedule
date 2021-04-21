@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<meta charset="UTF-8">
+
+<title>排班 - 上应大易班人力部</title>
+
+<meta name="author"      content="RainSlide">
+<meta name="description" content="上应大易班人力部排班页面">
+
+<meta name="viewport" content="width=device-width">
+<meta name="color-scheme" content="normal">
+<meta name="theme-color"  content="#00A5ED">
+
+<!-- <link rel="canonical" href=""> -->
+
+<style>
+
+</style>
+
+<link rel="stylesheet" href="schedule.css">
+
+<header>
+	<h1>排班 - 上应大易班人力部</h1>
+</header>
+
+<main>
+
+<section class="schedule">
+
+<h2 class="center" contenteditable="true">易班体验中心排班表</h2>
+
+<div class="table-container">
+<table id="schedule">
+	<thead>
+		<tr><th>节次</th><th>星期一</th><th>星期二</th><th>星期三</th><th>星期四</th><th>星期五</th></tr>
+	</thead>
+	<tbody>
+		<!-- 上午 -->
+		<tr><th>1</th><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td></tr>
+		<tr><th>2</th></tr>
+		<tr><th>3</th><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td></tr>
+		<tr><th>4</th></tr>
+		<!-- 下午 -->
+		<tr><th>5</th><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td></tr>
+		<tr><th>6</th></tr>
+		<tr><th>7</th><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td></tr>
+		<tr><th>8</th></tr>
+		<!-- 晚课 -->
+		<tr><th>9</th><td rowspan="3"></td><td rowspan="3"></td><td rowspan="3"></td><td rowspan="3"></td><td rowspan="3" class="disabled"></td></tr>
+		<tr><th>10</th></tr>
+		<tr><th>11</th></tr>
+	</tbody>
+</table>
+</div>
+
+</section>
+
+<section class="week">
+	<h2>周数</h2>
+	<p>第 <input type="number" id="week" min="1" max="99" size="2"> 周</p>
+</section>
+
+<section class="people">
+
+	<h2>人员</h2>
+	<div id="people">请在表格中点击选择时间段</div>
+	
+	<div class="button-groups">
+
+		<div class="button-group">
+			<button id="set"   >安排！</button>
+			<button id="cancel">取消</button>
+		</div>
+
+		<div class="button-group">
+			<button id="all"    >全选</button>
+			<button id="reverse">反选</button>
+			<button id="clear"  >清空</button>
+		</div>
+
+	</div>
+
+</section>
+
+</main>
+
+<script src="schedule.js"></script>
+
+</html>
