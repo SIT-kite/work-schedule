@@ -1,0 +1,3 @@
+[submodule "zfedu"]
+	path = zf-tools
+	url = https://github.com/sunnysab/zf-tools.git
